@@ -1,5 +1,8 @@
 # COS
 A Operating system written in C
+Mostly made for me to learn about making operating systems
+The tutorial followed can be found here
+https://www.youtube.com/watch?v=wz9CZBeXR6U&t=41s
 
 ## Prerequisites
 
@@ -11,14 +14,14 @@ A Operating system written in C
 ## Setup
 
 Build an image for our build-environment:
- - `docker build buildenv -t myos-buildenv`
+ - `docker build buildenv -t cos-buildenv`
 
 ## Build
 
 Enter build environment:
- - Linux or MacOS: `docker run --rm -it -v "$(pwd)":/root/env myos-buildenv`
- - Windows (CMD): `docker run --rm -it -v "%cd%":/root/env myos-buildenv`
- - Windows (PowerShell): `docker run --rm -it -v "${pwd}:/root/env" myos-buildenv`
+ - Linux or MacOS: `docker run --rm -it -v "$(pwd)":/root/env cos-buildenv`
+ - Windows (CMD): `docker run --rm -it -v "%cd%":/root/env cos-buildenv`
+ - Windows (PowerShell): `docker run --rm -it -v "${pwd}:/root/env" cos-buildenv`
  - Please use the linux command if you are using `WSL`, `msys2` or `git bash`
  - NOTE: If you are having trouble with an unshared drive, ensure your docker daemon has access to the drive you're development environment is in. For Docker Desktop, this is in "Settings > Shared Drives" or "Settings > Resources > File Sharing".
 
@@ -45,4 +48,4 @@ Alternatively, you should be able to load the operating system on a USB drive an
 ## Cleanup
 
 Remove the build-evironment image:
- - `docker rmi myos-buildenv -f`
+ - `docker rmi cos-buildenv -f`
